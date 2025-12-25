@@ -8,7 +8,7 @@ import (
 func TestMain(m *testing.M) {
 	code := m.Run()
 	if code == 0 {
-		println("All tests passed successfully")
+		println("Success! Completed the Loops Quest 🎉")
 	}
 	os.Exit(code)
 }
