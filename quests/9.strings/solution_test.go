@@ -9,7 +9,7 @@ import (
 func TestMain(m *testing.M) {
 	code := m.Run()
 	if code == 0 {
-		println("Success! Completed the pointers Quest 🎉")
+		println("Success! Completed the strings Quest 🎉")
 	}
 	os.Exit(code)
 }
