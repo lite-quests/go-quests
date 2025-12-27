@@ -242,5 +242,5 @@ HasOnlyASCII("สวัสดี")   // false
 ## Run Tests
 
 ```bash
-go test ./strings/solution -v
+go test ./quests/9.strings -v
 ```

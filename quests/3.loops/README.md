@@ -140,7 +140,7 @@ Everything else (including non-letters) should be treated as consonants unless s
 Run tests using:
 
 ```bash
-go test ./loops/solution -v
+go test ./quests/3.loops -v
 ```
 
 Do not add logging or printing. Your implementation should be pure and deterministic.

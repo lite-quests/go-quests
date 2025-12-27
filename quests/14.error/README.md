@@ -208,5 +208,5 @@ if CanRetry(err) {
 ## Run Tests
 
 ```bash
-go test ./error/solution -v
+go test ./quests/14.error -v
 ```

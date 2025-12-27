@@ -268,5 +268,5 @@ In Go:
 ## Run Tests
 
 ```bash
-go test ./interfaces/solution -v
+go test ./quests/11.interfaces -v
 ```

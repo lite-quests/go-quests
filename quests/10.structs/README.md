@@ -232,5 +232,5 @@ u1.Age // still 20
 ## Run Tests
 
 ```bash
-go test ./structs/solution -v
+go test ./quests/10.structs -v
 ```

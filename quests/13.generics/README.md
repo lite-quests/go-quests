@@ -145,5 +145,5 @@ fmt.Println(lst2.AllElements()) // ["foo", "bar"]
 ## Run Tests
 
 ```bash
-go test ./linkedlist/solution -v
+go test ./quests/13.generics -v
 ```

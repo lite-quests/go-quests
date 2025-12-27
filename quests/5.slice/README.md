@@ -145,5 +145,5 @@ output := []int{}
 ## Run Tests
 
 ```bash
-go test ./slices/solution -v
+go test ./quests/5.slice -v
 ```

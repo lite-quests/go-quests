@@ -189,5 +189,5 @@ ConcatAll(",", )               // ""
 ## Run Tests
 
 ```bash
-go test ./functions/solution -v
+go test ./quests/7.functions -v
 ```

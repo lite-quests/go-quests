@@ -245,5 +245,5 @@ They are:
 ## Run Tests
 
 ```bash
-go test ./enum/solution -v
+go test ./quests/12.enum -v
 ```

@@ -84,5 +84,5 @@ Go is statically typed, everything has a clear value and a predictable zero stat
 Run tests using:
 
 ```bash
-go test ./values/solution -v
+go test ./quests/2.values -v
 ```
