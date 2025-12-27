@@ -63,5 +63,5 @@ func PointersQuest() {
 	// Make slice contain [1 2 3 100]
 	s := []int{1, 2, 3}
 	// CALL THE CORRECT FUNCTION HERE
-	fmt.Println(s) // expect: [1 2 3 100]
+	fmt.Println(s) // expect: [1 2 3 100]z
 }
