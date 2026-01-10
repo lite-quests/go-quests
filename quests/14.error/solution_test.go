@@ -115,9 +115,7 @@ func TestValidateFileWrapping(t *testing.T) {
 		t.Fatalf("expected error, got nil")
 	}
 
-	expectedInner := errors.New("filename cannot be empty")
-
-	if !errors.Is(err, expectedInner) {
+	if !errors.Is(err, ErrEmptyFilename) {
 		t.Fatalf("expected wrapped ErrEmptyFilename, got %v", err)
 	}
 }

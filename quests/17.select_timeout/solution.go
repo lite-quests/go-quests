@@ -25,7 +25,7 @@ func FunctionOrdered() {
 	go func() {
 
 	}()
-	for range 5 {
+	for i := 0; i < 5; i++ {
 		select {
 		case msg1 := <-c1:
 			fmt.Println(msg1)
