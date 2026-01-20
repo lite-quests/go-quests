@@ -41,7 +41,7 @@ None
 ## Testing
 To run the tests, execute the following command from the root directory:
 ```bash
-go test -v ./quests/2.values
+go test -v ./quests/002.values
 ```
 
 Or from the quest directory:

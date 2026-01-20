@@ -48,7 +48,7 @@ Implement three channel manipulation functions observing strict read/write respo
 ## Testing
 To run the tests, execute the following command from the root directory:
 ```bash
-go test -v ./quests/16.channel
+go test -v ./quests/016.channel
 ```
 
 Or from the quest directory:

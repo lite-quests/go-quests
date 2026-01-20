@@ -45,7 +45,7 @@ Implement two functions: `SumEvenNumbers` to aggregate even integers, and `KeepO
 ## Testing
 To run the tests, execute the following command from the root directory:
 ```bash
-go test -v ./quests/3.loops
+go test -v ./quests/003.loops
 ```
 
 Or from the quest directory:

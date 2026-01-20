@@ -54,7 +54,7 @@ Implement four utility functions demonstrating multiple return values, variadic 
 ## Testing
 To run the tests, execute the following command from the root directory:
 ```bash
-go test -v ./quests/7.functions
+go test -v ./quests/007.functions
 ```
 
 Or from the quest directory:

@@ -59,7 +59,7 @@ go func() {
 ## Testing
 To run the tests, execute the following command from the root directory:
 ```bash
-go test -v ./quests/17.select_timeout
+go test -v ./quests/017.select_timeout
 ```
 
 Or from the quest directory:

@@ -46,7 +46,7 @@ Implement `ProcessScores` to filter, normalize, and adjust a list of integer sco
 ## Testing
 To run the tests, execute the following command from the root directory:
 ```bash
-go test -v ./quests/5.slice
+go test -v ./quests/005.slice
 ```
 
 Or from the quest directory:
