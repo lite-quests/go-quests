@@ -46,7 +46,7 @@ Implement a basic concurrent request-response flow where a "Client" sends a requ
 ## Testing
 To run the tests, execute the following command from the root directory:
 ```bash
-go test -v ./quests/15.go_routine
+go test -v ./quests/015.go_routine
 ```
 
 Or from the quest directory:

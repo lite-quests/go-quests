@@ -68,7 +68,7 @@ Implement an order lifecycle state machine using `OrderState` enum. Define valid
 ## Testing
 To run the tests, execute the following command from the root directory:
 ```bash
-go test -v ./quests/12.enum
+go test -v ./quests/012.enum
 ```
 
 Or from the quest directory:

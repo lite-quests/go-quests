@@ -61,7 +61,7 @@ Implement a file validation system using sentinel errors, custom error types, er
 ## Testing
 To run the tests, execute the following command from the root directory:
 ```bash
-go test -v ./quests/14.error
+go test -v ./quests/014.error
 ```
 
 Or from the quest directory:

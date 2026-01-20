@@ -30,7 +30,7 @@ None
 ## Testing
 To run the tests, execute the following command from the root directory:
 ```bash
-go test -v ./quests/1.hello_go
+go test -v ./quests/001.hello_go
 ```
 
 Or from the quest directory:

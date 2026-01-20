@@ -59,7 +59,7 @@ Implement Unicode-aware string analysis functions to handle byte vs. rune counti
 ## Testing
 To run the tests, execute the following command from the root directory:
 ```bash
-go test -v ./quests/9.strings
+go test -v ./quests/009.strings
 ```
 
 Or from the quest directory:

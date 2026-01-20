@@ -61,7 +61,7 @@ Implement a polymorphic payment processing system with three distinct payment me
 ## Testing
 To run the tests, execute the following command from the root directory:
 ```bash
-go test -v ./quests/11.interfaces
+go test -v ./quests/011.interfaces
 ```
 
 Or from the quest directory:

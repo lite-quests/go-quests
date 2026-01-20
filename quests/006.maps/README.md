@@ -64,7 +64,7 @@ keys := c.AllKeys()   // ["b"]
 ## Testing
 To run the tests, execute the following command from the root directory:
 ```bash
-go test -v ./quests/6.maps
+go test -v ./quests/006.maps
 ```
 
 Or from the quest directory:

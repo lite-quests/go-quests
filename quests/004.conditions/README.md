@@ -53,7 +53,7 @@ Implement complex request classification using `if/else` and a grading system us
 ## Testing
 To run the tests, execute the following command from the root directory:
 ```bash
-go test -v ./quests/4.conditions
+go test -v ./quests/004.conditions
 ```
 
 Or from the quest directory:

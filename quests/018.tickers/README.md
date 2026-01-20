@@ -56,7 +56,7 @@ world
 ## Testing
 To run the tests, execute the following command from the root directory:
 ```bash
-go test -v ./quests/18.tickers
+go test -v ./quests/018.tickers
 ```
 
 Or from the quest directory:

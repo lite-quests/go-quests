@@ -60,7 +60,7 @@ elems := lst.AllElements()
 ## Testing
 To run the tests, execute the following command from the root directory:
 ```bash
-go test -v ./quests/13.generics
+go test -v ./quests/013.generics
 ```
 
 Or from the quest directory:

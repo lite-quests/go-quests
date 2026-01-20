@@ -60,7 +60,7 @@ Implement a `User` struct and associated methods to model a user profile, demons
 ## Testing
 To run the tests, execute the following command from the root directory:
 ```bash
-go test -v ./quests/10.structs
+go test -v ./quests/010.structs
 ```
 
 Or from the quest directory:

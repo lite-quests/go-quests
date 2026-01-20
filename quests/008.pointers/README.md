@@ -38,7 +38,7 @@ No direct function call examples; the quest is to implement the correct calls in
 ## Testing
 To run the tests, execute the following command from the root directory:
 ```bash
-go test -v ./quests/8.pointers
+go test -v ./quests/008.pointers
 ```
 
 Or from the quest directory:
