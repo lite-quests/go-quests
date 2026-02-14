@@ -12,6 +12,10 @@ A worker pool is a concurrency pattern where a fixed number of goroutines (worke
 - [https://pkg.go.dev/sync](https://pkg.go.dev/sync)
 - [https://pkg.go.dev/time#Ticker](https://pkg.go.dev/time#Ticker)
 
+## Additional useful concepts to explore:
+
+- [WaitGroup](https://gobyexample.com/waitgroups) for synchronizing goroutines.
+
 ---
 
 ## Quest
