@@ -74,3 +74,23 @@ To run the tests:
 ```bash
 go test -v ./quests/018.rate_limiting
 ```
+
+Or from the quest directory:
+
+```bash
+go test -v
+```
+
+Expected output:
+
+```text
+=== RUN   TestPingPong
+=== RUN   TestPingPong/test_only_burst
+=== RUN   TestPingPong/test_burst_then_rate_limit
+=== RUN   TestPingPong/test_all_rate_limited
+--- PASS: TestPingPong (0.90s)
+    --- PASS: TestPingPong/test_only_burst (0.00s)
+    --- PASS: TestPingPong/test_burst_then_rate_limit (0.30s)
+    --- PASS: TestPingPong/test_all_rate_limited (0.60s)
+PASS
+```
