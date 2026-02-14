@@ -8,7 +8,9 @@ import (
 func TestMain(m *testing.M) {
 	code := m.Run()
 	if code == 0 {
-		println("Success! Completed the generics Quest 🎉")
+		colorReset := "\033[0m"
+		colorGreen := "\033[32m"
+		println(colorGreen, "Success! Completed the generics Quest 🎉", colorReset)
 	}
 	os.Exit(code)
 }
