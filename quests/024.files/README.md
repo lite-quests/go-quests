@@ -90,12 +90,12 @@ Expected output:
 
 ```text
 === RUN   TestProcessFile
-=== RUN   TestProcessFile/transforms_first_and_last_5_words
-=== RUN   TestProcessFile/rejects_fewer_than_10_words
-=== RUN   TestProcessFile/middle_words_unchanged
+=== RUN   TestProcessFile/less_than_10_words
+=== RUN   TestProcessFile/exactly_10_words
+=== RUN   TestProcessFile/more_than_10_words_middle_unchanged
 --- PASS: TestProcessFile (0.00s)
-    --- PASS: TestProcessFile/transforms_first_and_last_5_words (0.00s)
-    --- PASS: TestProcessFile/rejects_fewer_than_10_words (0.00s)
-    --- PASS: TestProcessFile/middle_words_unchanged (0.00s)
+    --- PASS: TestProcessFile/less_than_10_words (0.00s)
+    --- PASS: TestProcessFile/exactly_10_words (0.00s)
+    --- PASS: TestProcessFile/more_than_10_words_middle_unchanged (0.00s)
 PASS
 ```

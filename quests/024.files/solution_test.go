@@ -1,6 +1,8 @@
 package files
+
 import (
 	"os"
+	"strings"
 	"testing"
 )
 
@@ -61,7 +63,7 @@ func TestProcessFile(t *testing.T){
 			}
 			raw,err:=os.ReadFile("task.txt")
 			if err!=nil{
-				t.Errof("could not read task.txt after calling ProcessFile()")
+				t.Errorf("could not read task.txt after calling ProcessFile()")
 				return
 			}
 			got:=strings.TrimSpace(string(raw))
