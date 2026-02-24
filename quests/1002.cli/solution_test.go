@@ -9,6 +9,15 @@ import (
 	"testing"
 )
 
+func TestMain(m *testing.M) {
+	code := m.Run()
+	if code == 0 {
+		colorReset := "\033[0m"
+		colorGreen := "\033[32m"
+		println(colorGreen, "Success! Completed the cli Quest 🎉", colorReset)
+	}
+	os.Exit(code)
+}
 func captureOutput(f func() error) (string, error) {
 	old := os.Stdout
 	r, w, _ := os.Pipe()

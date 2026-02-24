@@ -8,6 +8,15 @@ import (
 
 const helperEnv = "GO_HELPER_PROCESS"
 
+func TestMain(m *testing.M) {
+	code := m.Run()
+	if code == 0 {
+		colorReset := "\033[0m"
+		colorGreen := "\033[32m"
+		println(colorGreen, "Success! Completed the exit Quest 🎉", colorReset)
+	}
+	os.Exit(code)
+}
 func TestHelperProcess(t *testing.T) {
 	if os.Getenv(helperEnv) != "1" {
 		return

@@ -12,9 +12,9 @@ Understanding `os.Exit` is important when building CLI tools and handling fatal 
 
 ## References
 
-* [https://pkg.go.dev/os#Exit](https://pkg.go.dev/os#Exit)
-* [https://gobyexample.com/exit](https://gobyexample.com/exit)
-* [https://go.dev/doc/effective_go#errors](https://go.dev/doc/effective_go#errors)
+- [https://pkg.go.dev/os#Exit](https://pkg.go.dev/os#Exit)
+- [https://gobyexample.com/exit](https://gobyexample.com/exit)
+- [https://go.dev/doc/effective_go#errors](https://go.dev/doc/effective_go#errors)
 
 ---
 
@@ -45,13 +45,13 @@ The function must exit based on the following conditions:
 ---
 
 ### Exit Conditions
-| Case  | Condition             | Input Scenario                                             | Exit Code | Meaning                                        |
-| ----- | --------------------- | ---------------------------------------------------------- | --------- | ---------------------------------------------- |
-| **1** | Host unreachable      | `host` is empty                                               | `1`       | The database host is empty or unreachable      |
-| **2** | Invalid port          | `port` is lesser than or equal to 0 (OR)  `port` is greater than 65535                            | `2`       | The port number is outside the valid TCP range |
-| **3** | Authentication failed | `credentialsValid` is false                                | `3`       | Database credentials are incorrect             |
-| **4** | Successful connection | `host` is not empty (AND) valid port (AND) `credentialsValid` is true | `0`       | Database connection successful                 |
 
+| Case  | Condition             | Input Scenario                                                        | Exit Code | Meaning                                        |
+| ----- | --------------------- | --------------------------------------------------------------------- | --------- | ---------------------------------------------- |
+| **1** | Host unreachable      | `host` is empty                                                       | `1`       | The database host is empty or unreachable      |
+| **2** | Invalid port          | `port` is lesser than or equal to 0 (OR) `port` is greater than 65535 | `2`       | The port number is outside the valid TCP range |
+| **3** | Authentication failed | `credentialsValid` is false                                           | `3`       | Database credentials are incorrect             |
+| **4** | Successful connection | `host` is not empty (AND) valid port (AND) `credentialsValid` is true | `0`       | Database connection successful                 |
 
 ### Inputs
 
@@ -93,7 +93,6 @@ Exit code:
 1
 ```
 
-
 ---
 
 ## Testing
@@ -113,7 +112,17 @@ go test -v
 Expected output:
 
 ```text
+=== RUN   TestHelperProcess
+--- PASS: TestHelperProcess (0.00s)
 === RUN   TestConnectDB
---- PASS: TestConnectDB (0.00s)
+=== RUN   TestConnectDB/success
+=== RUN   TestConnectDB/empty_host
+=== RUN   TestConnectDB/invalid_port
+=== RUN   TestConnectDB/invalid_credentials
+--- PASS: TestConnectDB (0.02s)
+    --- PASS: TestConnectDB/success (0.01s)
+    --- PASS: TestConnectDB/empty_host (0.01s)
+    --- PASS: TestConnectDB/invalid_port (0.00s)
+    --- PASS: TestConnectDB/invalid_credentials (0.00s)
 PASS
 ```
