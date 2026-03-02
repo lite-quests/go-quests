@@ -13,6 +13,7 @@ Additionally, many Go programs act as **supervisors** that spin up background ch
 ## Quest
 
 ### Objective
+
 You are building the master control loop for the Multiplayer Game Server itself (following the initialization step from the previous quest). The server acts as a supervisor that spins up a background database backup worker (`workerCmd`). Your server must handle `SIGINT` gracefully to shut down the worker, and handle `SIGHUP` and `SIGUSR1` for manual administrative commands.
 
 ### Requirements
@@ -22,7 +23,7 @@ Implement the function:
 
 1. Use `signal.NotifyContext` with `context.Background()` to listen for `os.Interrupt` (`syscall.SIGINT`). This will be your graceful shutdown context. Defer calling its cancellation function (e.g., `defer stop()`).
 2. Create a standard signal channel (e.g. `make(chan os.Signal, 1)`) and use `signal.Notify` to register it to receive `syscall.SIGHUP` and `syscall.SIGUSR1`.
-3. Use `exec.Command` to prepare the child process using `workerCmd`. *Note: We use `Command` instead of `CommandContext` so we can manually send `SIGTERM` instead of letting Context brutally kill the process.*
+3. Use `exec.Command` to prepare the child process using `workerCmd`. _Note: We use `Command` instead of `CommandContext` so we can manually send `SIGTERM` instead of letting Context brutally kill the process._
 4. Start the child process in the background using `cmd.Start()`. If it fails to start, return the error.
 5. Send `true` to the `ready` channel (`ready <- true`) to let the tests know you're running.
 6. Enter an infinite `for { select { ... } }` loop to handle events:
@@ -35,10 +36,12 @@ Implement the function:
      - Return the result of `cmd.Wait()` directly, even if it is an ExitError from the SIGTERM.
 
 ### Inputs
+
 - `ready`: A `chan bool` that you must send `true` to once `cmd.Start()` has succeeded.
 - `workerCmd`: The executable name or path of the worker command.
 
 ### Outputs
+
 - `error`: Start errors or the final wait error, otherwise `nil`.
 
 ### Example
@@ -60,5 +63,20 @@ go RunGameServer(ready, "sleep 100")
 ## Testing
 
 ```bash
-go test -v ./quests/1009.signals
+go test -v ./quests/033.signals
+```
+
+Or from the quest directory:
+
+```bash
+go test -v
+```
+
+Expected output:
+
+```text
+=== RUN   TestRunGameServer
+    solution_test.go:60: Process exited with wait error (acceptable if killed): signal: terminated
+--- PASS: TestRunGameServer (0.21s)
+PASS
 ```

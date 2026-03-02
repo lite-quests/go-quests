@@ -100,7 +100,7 @@ Exit code:
 To run the tests, execute the following command from the root directory:
 
 ```bash
-go test -v ./quests/0001.exit
+go test -v ./quests/032.exit
 ```
 
 Or from the quest directory:

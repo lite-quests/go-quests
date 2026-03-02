@@ -12,9 +12,15 @@ Historically, Go's standard library server was very basic. But starting in Go 1.
 - **`json.NewDecoder(r.Body).Decode(&obj)`**: Parses JSON data sent by the client into a Go struct.
 - **`json.NewEncoder(w).Encode(obj)`**: Converts a Go struct back into JSON and sends it to the client.
 
+## References
+
+- [Go by Example: HTTP Server](https://gobyexample.com/http-server)
+- [Go by Example: JSON](https://gobyexample.com/json)
+
 ## Quest
 
 ### Objective
+
 You will build an **E-Commerce Product Catalog API**.
 
 ### Requirements
@@ -22,7 +28,7 @@ You will build an **E-Commerce Product Catalog API**.
 Implement the function:
 `func StartCatalogServer(port int) error`
 
-1. Create a `map[string]Product` to store products in memory. 
+1. Create a `map[string]Product` to store products in memory.
 2. Initialize an `http.ServeMux`.
 3. Create a route for **`GET /products`**:
    - Write all map values as a JSON list back to the client.
@@ -37,13 +43,16 @@ Implement the function:
 6. Start the server via `http.ListenAndServe` using the formatted `port` string and your mux.
 
 ### Inputs
+
 - `port`: The port to start the server on, e.g., `8080`.
 
 ### Outputs
+
 - The Go function should block and return an `error` if `http.ListenAndServe` fails.
 - The HTTP server routes output JSON strings and appropriate status codes (`200 OK`, `201 Created`, `404 Not Found`).
 
 ### Models
+
 ```go
 type Product struct {
 	ID    string  `json:"id"`
@@ -53,6 +62,29 @@ type Product struct {
 ```
 
 ### Testing
+
 ```bash
-go test -v ./quests/1004.http_server
+go test -v ./quests/027.http_server
+```
+
+Or from the quest directory:
+
+```bash
+go test -v
+```
+
+Expected output:
+
+```text
+=== RUN   TestStartCatalogServer
+=== RUN   TestStartCatalogServer/post_product
+=== RUN   TestStartCatalogServer/get_products
+=== RUN   TestStartCatalogServer/get_product_by_id
+=== RUN   TestStartCatalogServer/get_product_not_found
+--- PASS: TestStartCatalogServer (0.01s)
+    --- PASS: TestStartCatalogServer/post_product (0.00s)
+    --- PASS: TestStartCatalogServer/get_products (0.00s)
+    --- PASS: TestStartCatalogServer/get_product_by_id (0.00s)
+    --- PASS: TestStartCatalogServer/get_product_not_found (0.00s)
+PASS
 ```

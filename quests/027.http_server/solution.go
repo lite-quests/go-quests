@@ -10,5 +10,12 @@ type Product struct {
 }
 
 func StartCatalogServer(port int) error {
+	// In-memory store
+
+	// GET /products
+
+	// GET /products/{id}
+
+	// POST /products
 	return nil
 }

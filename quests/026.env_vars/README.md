@@ -7,12 +7,14 @@ Think of Environment Variables as the "settings menu" for your code. Just like y
 Environment variables are the industry standard for configuring applications across different environments (local development vs. production). They are passed into the running program by the operating system.
 
 In Go, the `os` package provides access to these variables:
+
 - `os.Getenv("KEY")`: Returns the value as a string, or an empty string if not set.
 - `os.LookupEnv("KEY")`: Returns the value and a boolean `(value, exists)`. Useful when you need to distinguish between an intentional empty value `""` vs a variable never being set.
 
-**Crucial Note**: Environment variables from the OS are *always* returned as strings. If you need numbers or booleans (like a port number or debug flag), you must explicitly convert them using the `strconv` package.
+**Crucial Note**: Environment variables from the OS are _always_ returned as strings. If you need numbers or booleans (like a port number or debug flag), you must explicitly convert them using the `strconv` package.
 
 ## References
+
 - [Go by Example: Environment Variables](https://gobyexample.com/environment-variables)
 - [pkg.go.dev/os](https://pkg.go.dev/os)
 - [12-Factor App: Config](https://12factor.net/config)
@@ -20,6 +22,7 @@ In Go, the `os` package provides access to these variables:
 ## Quest
 
 ### Objective
+
 Implement a configuration loader that reads database settings and feature flags from environment variables.
 
 ### Requirements
@@ -37,9 +40,11 @@ Implement a configuration loader that reads database settings and feature flags 
    - **DebugMode**: Read from `DEBUG_MODE`. **Optional**. Default to `false` if not set. Parse using `strconv.ParseBool`. Return an error if set but invalid.
 
 ### Inputs
+
 - None (reads from system environment).
 
 ### Outputs
+
 - `Config`: The populated struct.
 - `error`: Non-nil if any validation fails.
 
@@ -54,6 +59,7 @@ config, err := LoadConfig()
 ```
 
 ## Tips
+
 - Use `os.Setenv` in tests (or your main function) to simulate values.
 - converting string to int: `strconv.Atoi(s)`
 - converting string to bool: `strconv.ParseBool(s)`
@@ -61,5 +67,29 @@ config, err := LoadConfig()
 ## Testing
 
 ```bash
-go test -v ./quests/0003.env_vars
+go test -v ./quests/026.env_vars
+```
+
+Or from the quest directory:
+
+```bash
+go test -v
+```
+
+Expected output:
+
+```text
+=== RUN   TestLoadConfig
+=== RUN   TestLoadConfig/success_all_fields
+=== RUN   TestLoadConfig/success_defaults
+=== RUN   TestLoadConfig/fail_missing_host
+=== RUN   TestLoadConfig/fail_invalid_port
+=== RUN   TestLoadConfig/fail_invalid_bool
+--- PASS: TestLoadConfig (0.00s)
+    --- PASS: TestLoadConfig/success_all_fields (0.00s)
+    --- PASS: TestLoadConfig/success_defaults (0.00s)
+    --- PASS: TestLoadConfig/fail_missing_host (0.00s)
+    --- PASS: TestLoadConfig/fail_invalid_port (0.00s)
+    --- PASS: TestLoadConfig/fail_invalid_bool (0.00s)
+PASS
 ```

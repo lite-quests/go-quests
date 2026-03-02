@@ -110,7 +110,7 @@ RunCLI(args)
 To run the tests:
 
 ```bash
-go test -v ./quests/1002.cli
+go test -v ./quests/025.cli
 ```
 
 Or from the quest directory:
