@@ -47,8 +47,8 @@ Your program must produce **exactly** these 10 lines of output:
 ```text
 Product: {Laptop 42 899.99 true}
 Details: {name:Laptop quantity:42 price:899.99 available:true}
-Go-syntax: main.Product{name:"Laptop", quantity:42, price:899.99, available:true}
-Type: main.Product
+Go-syntax: stringformatting.Product{name:"Laptop", quantity:42, price:899.99, available:true}
+Type: stringformatting.Product
 Available: true
 Quantity: 42
 Quantity in binary: 101010
