@@ -1,4 +1,4 @@
-package solutions
+package cli
 
 import (
 	"bufio"

@@ -1,4 +1,4 @@
-package solutions
+package http_client
 
 import (
 	"bytes"

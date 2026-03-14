@@ -9,7 +9,7 @@
 
 A beginner-friendly set of small Go exercises (“quests”). Each quest is intentionally small so you can practice one Go concept at a time.
 
-You implement functions in `solution.go` and confirm correctness with unit tests in `solution_test.go`.
+You implement functions in `<topic>.go` and confirm correctness with unit tests in `<topic>_test.go`.
 
 ---
 
@@ -22,7 +22,7 @@ You implement functions in `solution.go` and confirm correctness with unit tests
 - [Git](https://git-scm.com/install/) (optional, but recommended)
 
 
-Check your Go version: 
+Check your Go version:
 
 ```sh
 go version
@@ -58,11 +58,51 @@ cd go-quests # This command helps you go into the quest directory from the termi
 
 - `quests/<n.topic>/README.md` — instructions for that quest
 
-- `quests/<n.topic>/solution.go` — your implementation (edit this)
+- `quests/<n.topic>/<topic>.go` — your implementation (edit this)
 
-- `quests/<n.topic>/solution_test.go` — tests (do not change)
+- `quests/<n.topic>/<topic>_test.go` — tests (do not change)
 
 - `solutions/` — reference implementations (use to compare after you try)
+
+---
+
+### Quests
+
+| # | Topic | Folder | Difficulty |
+|---|-------|--------|------------|
+| 1 | Hello Go | [quests/001.hello_go](quests/001.hello_go) | Easy |
+| 2 | Values | [quests/002.values](quests/002.values) | Easy |
+| 3 | Loops | [quests/003.loops](quests/003.loops) | Easy |
+| 4 | Conditions | [quests/004.conditions](quests/004.conditions) | Easy |
+| 5 | Slice | [quests/005.slice](quests/005.slice) | Easy |
+| 6 | Maps | [quests/006.maps](quests/006.maps) | Easy |
+| 7 | Functions | [quests/007.functions](quests/007.functions) | Easy |
+| 8 | Pointers | [quests/008.pointers](quests/008.pointers) | Easy |
+| 9 | Strings | [quests/009.strings](quests/009.strings) | Easy |
+| 10 | Structs | [quests/010.structs](quests/010.structs) | Easy |
+| 11 | Interfaces | [quests/011.interfaces](quests/011.interfaces) | Medium |
+| 12 | Enum | [quests/012.enum](quests/012.enum) | Medium |
+| 13 | Generics | [quests/013.generics](quests/013.generics) | Medium |
+| 14 | Error | [quests/014.error](quests/014.error) | Medium |
+| 15 | Go Routine | [quests/015.go_routine](quests/015.go_routine) | Medium |
+| 16 | Channel | [quests/016.channel](quests/016.channel) | Medium |
+| 17 | Select & Timeout | [quests/017.select_timeout](quests/017.select_timeout) | Medium |
+| 18 | Tickers | [quests/018.tickers](quests/018.tickers) | Medium |
+| 19 | Worker Pool | [quests/019.worker_pool](quests/019.worker_pool) | Hard |
+| 20 | Rate Limiting | [quests/020.rate_limiting](quests/020.rate_limiting) | Hard |
+| 21 | Mutexes | [quests/021.mutexes](quests/021.mutexes) | Hard |
+| 22 | String Formatting | [quests/022.string_formatting](quests/022.string_formatting) | Medium |
+| 23 | Regex | [quests/023.regex](quests/023.regex) | Medium |
+| 24 | Files | [quests/024.files](quests/024.files) | Medium |
+| 25 | CLI | [quests/025.cli](quests/025.cli) | Medium |
+| 26 | Env Vars | [quests/026.env_vars](quests/026.env_vars) | Easy |
+| 27 | HTTP Server | [quests/027.http_server](quests/027.http_server) | Hard |
+| 28 | HTTP Client | [quests/028.http_client](quests/028.http_client) | Hard |
+| 29 | Context | [quests/029.context](quests/029.context) | Hard |
+| 30 | Logging | [quests/030.logging](quests/030.logging) | Medium |
+| 31 | Processes | [quests/031.processes](quests/031.processes) | Hard |
+| 32 | Exit | [quests/032.exit](quests/032.exit) | Easy |
+| 33 | Signals | [quests/033.signals](quests/033.signals) | Hard |
 
 ---
 
@@ -70,13 +110,13 @@ cd go-quests # This command helps you go into the quest directory from the termi
 1. Open the repo folder in VS Code (Or any other IDE of your choice)
 2. Pick a quest folder under `quests/` (start with smaller numbers first)
 3. Read `quests/<n.topic>/README.md` thoroughly. Review all referenced links and documentation to gain a complete understanding of the underlying concept. If the preview does not render correctly, use **Ctrl + Shift + V** to open the README in preview mode for improved readability.
-4. Open the solution file:
-   - Example: `quests/10.structs/solution.go`
-5. Implement the required functions/methods. 
+4. Open the implementation file:
+   - Example: `quests/010.structs/structs.go`
+5. Implement the required functions/methods.
 6. Run the quest tests:
 
 ```sh
-go test -v ./quests/10.structs
+go test -v ./quests/010.structs
 ```
 
 6. Repeat until all tests pass. If stuck, inspect the failing test output first.
@@ -96,7 +136,7 @@ This repo is designed so that tests teach you the spec: make changes → run tes
 - **Read test failures carefully**: they usually tell you the exact edge case you missed.
 
 - **Avoid changing test files**
-  If tests don’t pass, fix `solution.go` (the tests define the requirements).
+  If tests don’t pass, fix `<topic>.go` (the tests define the requirements).
 
 - **Disable AI assistance while solving**
   You’ll learn faster if you struggle a bit, read the errors, and look things up in the Go docs. Use AI only after you’ve made a real attempt.

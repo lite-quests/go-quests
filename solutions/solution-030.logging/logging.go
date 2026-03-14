@@ -1,4 +1,4 @@
-package solutions
+package logging
 
 import (
 	"log/slog"

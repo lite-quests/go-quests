@@ -1,4 +1,4 @@
-package solutions
+package signals
 
 import (
 	"context"

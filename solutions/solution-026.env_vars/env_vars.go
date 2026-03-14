@@ -1,4 +1,4 @@
-package solutions
+package env_vars
 
 import (
 	"fmt"

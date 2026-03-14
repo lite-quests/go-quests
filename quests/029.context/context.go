@@ -2,7 +2,6 @@ package context
 
 import (
 	"context"
-	"time"
 )
 
 // Read README.md for the instructions
@@ -26,24 +25,4 @@ func (api *CDNAPI) VerifyChecksum(ctx context.Context) { api.VerifyCtx = ctx }
 
 // TODO: Implement RunSmartDownloader
 func RunSmartDownloader(api *CDNAPI) {
-	// 1. Root context
-	rootCtx := context.Background()
-
-	// 2. Tracing (LogActivity)
-	traceCtx := context.WithValue(rootCtx, TraceKey("trace_id"), "smart-dl-123")
-	api.LogActivity(traceCtx)
-
-	// 3. DNS Lookup with timeout (100ms)
-	dnsCtx, dnsCancel := context.WithTimeout(rootCtx, 100*time.Millisecond)
-	defer dnsCancel()
-	api.DNSLookup(dnsCtx)
-
-	// 4. Concurrent Download with cancel
-	downloadCtx, cancel := context.WithCancel(rootCtx)
-	cancel() // simulate early completion
-	api.DownloadChunks(downloadCtx)
-
-	// 5. Verify Checksum with TODO context
-	api.VerifyChecksum(context.TODO())
-
 }
