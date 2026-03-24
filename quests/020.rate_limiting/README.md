@@ -72,7 +72,7 @@ Ping 14:32:01.424
 To run the tests:
 
 ```bash
-go test -v ./quests/018.rate_limiting
+go test -v ./quests/020.rate_limiting
 ```
 
 Or from the quest directory:
