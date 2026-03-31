@@ -103,6 +103,7 @@ cd go-quests # This command helps you go into the quest directory from the termi
 | 31 | Processes | [quests/031.processes](quests/031.processes) | Hard |
 | 32 | Exit | [quests/032.exit](quests/032.exit) | Easy |
 | 33 | Signals | [quests/033.signals](quests/033.signals) | Hard |
+| 34 | JSON | [quests/034.json](quests/034.json) | Medium |
 
 ---
 
@@ -130,7 +131,7 @@ This repo is designed so that tests teach you the spec: make changes → run tes
 
 ### Tips that save beginners a lot of time
 
-- **Don’t print unless the quest asks**  
+- **Don’t print unless the quest asks**
   Tests usually check return values or exact stdout bytes.
 
 - **Read test failures carefully**: they usually tell you the exact edge case you missed.
@@ -141,7 +142,7 @@ This repo is designed so that tests teach you the spec: make changes → run tes
 - **Disable AI assistance while solving**
   You’ll learn faster if you struggle a bit, read the errors, and look things up in the Go docs. Use AI only after you’ve made a real attempt.
 
-- **Prefer the intended concept over “test hacks”**  
+- **Prefer the intended concept over “test hacks”**
   You might find a workaround that passes the tests, but the goal is to practice the concept the quest is designed to teach (the quest README will usually hint what to use) so please stick to it.
 
 
@@ -158,7 +159,7 @@ This repo is designed so that tests teach you the spec: make changes → run tes
 ### Troubleshooting
 
 - **“package not found”**: make sure you’re running test command from the correct directory.
-- **Tests fail on stdout**: check newline requirements (`fmt.Print` vs `fmt.Println`). 
+- **Tests fail on stdout**: check newline requirements (`fmt.Print` vs `fmt.Println`).
 - **Changes don’t seem to affect tests**
   Clear the test cache:
   ```sh
