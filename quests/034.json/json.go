@@ -5,11 +5,11 @@ package json
 
 // Product represents a product in an online store.
 type Product struct {
-	ID       int     `json:"id"`
-	Name     string  `json:"name"`
-	Price    float64 `json:"price"`
-	InStock  bool    `json:"in_stock"`
-	Tags     []string `json:"tags,omitempty"`
+	ID      int      `json:"id"`
+	Name    string   `json:"name"`
+	Price   float64  `json:"price"`
+	InStock bool     `json:"in_stock"`
+	Tags    []string `json:"tags,omitempty"`
 }
 
 // MarshalProduct encodes a Product into a JSON byte slice.

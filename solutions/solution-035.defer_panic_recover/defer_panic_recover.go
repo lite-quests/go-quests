@@ -1,12 +1,12 @@
 package defer_panic_recover
 
 // DeferOrder appends strings to a slice using defer to demonstrate LIFO order.
-func DeferOrder() []string {
-	result := []string{}
+func DeferOrder() (result []string) {
+	result = []string{}
 	defer func() { result = append(result, "first") }()
 	defer func() { result = append(result, "second") }()
 	defer func() { result = append(result, "third") }()
-	return result
+	return
 }
 
 // SafeDivide divides a by b, panicking if b is 0.
@@ -30,10 +30,10 @@ func RecoverDivide(a, b int) (result int, panicMsg string) {
 }
 
 // Cleanup demonstrates defer for resource cleanup.
-func Cleanup() []string {
-	log := []string{}
+func Cleanup() (log []string) {
+	log = []string{}
 	log = append(log, "open")
 	defer func() { log = append(log, "close") }()
 	log = append(log, "work")
-	return log
+	return
 }
