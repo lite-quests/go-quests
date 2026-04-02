@@ -105,6 +105,7 @@ cd go-quests # This command helps you go into the quest directory from the termi
 | 33 | Signals | [quests/033.signals](quests/033.signals) | Hard |
 | 34 | JSON | [quests/034.json](quests/034.json) | Medium |
 | 35 | Defer, Panic & Recover | [quests/035.defer_panic_recover](quests/035.defer_panic_recover) | Medium |
+| 36 | Sorting | [quests/036.sorting](quests/036.sorting) | Easy |
 
 ---
 
