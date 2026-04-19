@@ -172,5 +172,6 @@ This repo is designed so that tests teach you the spec: make changes → run tes
 ### Contact
 
 For any issues, contact either:
+- [Lite Quests](https://x.com/litequests)
 - [Mani Yadla](https://x.com/mani_yadla_)
 - [Ananya Pappula](https://x.com/AnanyaPappula)
